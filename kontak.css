@@ -1,0 +1,121 @@
+ /* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background-image: url("plnLuas.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  main {
+  flex : 1;
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  padding-top: 100px; /* Tambahan untuk mendorong isi ke bawah */
+}
+  
+  .logo {
+    width: 130px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd100; /* PLN Yellow */
+  }
+  
+  /* Footer */
+ footer {
+  background: #222;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* kunci agar footer turun ke bawah */
+}
+
+  html {
+    scroll-behavior: smooth;
+  }   
+
+  .form-container {
+  background: rgba(0, 0, 0, 0.6); /* sedikit latar belakang agar terlihat */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto; /* ini yang membuat kontainer form di tengah horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #fff;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #ffd100;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e6bc00;
+}
+
+.form-button {
+  text-align: center; /* Menengahkan tombol secara horizontal */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+

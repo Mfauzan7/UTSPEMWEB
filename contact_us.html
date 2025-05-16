@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak Kami - PLN Nusantara Power</title>
+  <link rel="stylesheet" href="kontak.css" />
+  <script>
+    function validateForm() {
+      const name = document.forms["contactForm"]["name"].value;
+      const email = document.forms["contactForm"]["email"].value;
+      const message = document.forms["contactForm"]["message"].value;
+      if (!name || !email || !message) {
+        alert("Harap isi semua kolom formulir.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo PLN Nusantara Power" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about_us.html">Tentang Kami</a></li>
+        <li><a href="news.html">Berita</a></li>
+        <li><a href="contact_us.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="form-container">
+      <h2>Hubungi Kami</h2>
+      <form name="contactForm" onsubmit="return validateForm()">
+        <label for="name">Nama:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br />
+        <label for="message">Pesan:</label><br />
+        <textarea id="message" name="message"></textarea><br />
+        <div class="form-button">
+          <button type="submit">Kirim</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 PLN Nusantara Power</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  main {}
+
+  .logo {
+    width: 130px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd100; /* PLN Yellow */
+  }
+  
+  /* Fullscreen video background */
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hero-video {
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* ← ubah dari 'cover' ke 'contain' */
+    z-index: 0;
+  }  
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* overlay agar teks terbaca */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    top: 20%;
+    bottom: 50%;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding-top: calc(70px + 2vh); /* Otomatis sesuaikan dengan header */
+    padding-left: 20px;
+    padding-right: 20px;
+  }   
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  }
+  
+  .hero .btn {
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: #00baff;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }  
+  
+  .hero .btn:hover {
+    background: #009fd9;
+  }
+  
+  /* Footer */
+  footer {
+    background: #222;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+    }
+  
+    .hero h1 {
+      font-size: 32px;
+    }
+  
+    .hero .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }    
